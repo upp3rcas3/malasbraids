@@ -1,95 +1,235 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Mala's Braids</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mala's Braids | Indianapolis</title>
 
 <style>
+:root{
+  --brand:#7c3aed;
+  --bg:#fff7ed;
+  --text:#111827;
+  --muted:#6b7280;
+}
 
+*{box-sizing:border-box}
 body{
-font-family: Arial;
-margin:0;
-background:#fff7ed;
-text-align:center;
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  color:var(--text);
+  background:var(--bg);
 }
 
 header{
-background:#7c3aed;
-color:white;
-padding:30px;
-font-size:32px;
-font-weight:bold;
+  background:var(--brand);
+  color:#fff;
+  padding:18px 16px;
 }
 
-section{
-padding:40px;
+.header-wrap{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
 }
 
-h2{
-color:#7c3aed;
+.brand{
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:.3px;
 }
 
-button{
-background:#7c3aed;
-color:white;
-border:none;
-padding:15px 25px;
-font-size:18px;
-border-radius:6px;
-cursor:pointer;
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:16px;
+  font-weight:600;
+}
+
+.hero{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 16px 24px;
+  text-align:center;
+}
+
+.hero h1{
+  margin:0 0 8px;
+  font-size:36px;
+}
+
+.hero p{
+  margin:0 0 20px;
+  color:var(--muted);
+}
+
+.btn{
+  display:inline-block;
+  background:var(--brand);
+  color:#fff;
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:8px;
+  font-weight:700;
+}
+
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:28px 16px;
+}
+
+.section h2{
+  margin:0 0 16px;
+  font-size:26px;
+  text-align:center;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:16px;
+  margin-top:10px;
+}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:12px 14px 16px;
+}
+
+.style{
+  font-weight:700;
+}
+
+.price{
+  color:var(--brand);
+  font-weight:700;
+  margin-top:4px;
+}
+
+.contact{
+  text-align:center;
+  padding-bottom:40px;
+}
+
+.instagram{
+  margin-top:10px;
+  display:inline-block;
+  color:#fff;
+  background:#E1306C;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:700;
 }
 
 footer{
-background:#111;
-color:white;
-padding:20px;
+  text-align:center;
+  padding:18px 12px;
+  color:#fff;
+  background:#111;
+  font-size:14px;
 }
 
+/* Mobile tweaks */
+@media (max-width:520px){
+  .hero h1{font-size:28px}
+  nav{display:none}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-Mala's Braids Salon
+  <div class="header-wrap">
+    <div class="brand">Mala's Braids</div>
+    <nav>
+      <a href="#styles">Styles</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<section>
-
-<h2>Professional Hair Braiding</h2>
-
-<p>Beautiful, clean, and long-lasting braids.</p>
-
-<p>Book your appointment today.</p>
-
-<button>Call Now</button>
-
+<section class="hero">
+  <h1>Professional Hair Braiding</h1>
+  <p>Beautiful, neat, and long-lasting braids in Indianapolis.</p>
+  
+  <a class="btn" href="tel:+1(574)310-3874">Call to Book</a>
 </section>
 
-<section>
+<section id="styles" class="section">
+  <h2>Popular Styles & Prices</h2>
 
-<h2>Our Services</h2>
+  <div class="gallery">
 
-<p>• Knotless Braids</p>
-<p>• Box Braids</p>
-<p>• Crochet Braids</p>
-<p>• Kids Braids</p>
-<p>• Twist Braids</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=1200&auto=format&fit=crop" alt="Knotless Braids">
+      <div class="card-body">
+        <div class="style">Knotless Braids</div>
+        <div class="price">$180</div>
+      </div>
+    </div>
 
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1620331311520-246422fd82f9?q=80&w=1200&auto=format&fit=crop" alt="Box Braids">
+      <div class="card-body">
+        <div class="style">Box Braids</div>
+        <div class="price">$160</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1630332452856-51f5e9a9dc32?q=80&w=1200&auto=format&fit=crop" alt="Cornrows">
+      <div class="card-body">
+        <div class="style">Cornrows</div>
+        <div class="price">$70</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1594736797933-d0f06ba4bce5?q=80&w=1200&auto=format&fit=crop" alt="Kids Braids">
+      <div class="card-body">
+        <div class="style">Kids Braids</div>
+        <div class="price">$50</div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section>
+<section id="book" class="section contact">
+  <h2>Book an Appointment</h2>
+  <!-- Replace with booking platform if you add one later -->
+  <a class="btn" href="tel:+13170000000">Call to Book</a>
+</section>
 
-<h2>Location</h2>
-
-<p>Camby, Indiana</p>
-
+<section id="contact" class="section contact">
+  <h2>Follow on Instagram</h2>
+  <!-- Replace with your real Instagram -->
+  <a class="instagram" href="https://instagram.com/malasbraids" target="_blank">
+    View Our Instagram
+  </a>
 </section>
 
 <footer>
-
-<p>© Mala's Braids</p>
-
+  © Mala's Braids • Indianapolis, Indiana
 </footer>
 
 </body>
